@@ -1,0 +1,41 @@
+# 复制为 config.yaml 后按需修改
+mysql:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: ""
+  database: "csv_labeling"
+  charset: "utf8mb4"
+
+openai:
+  api_key: ""           # OpenAI key；若走千问兼容接口，也可填 DashScope key
+  base_url: ""          # 可选：例如 https://dashscope.aliyuncs.com/compatible-mode/v1
+  model: "gpt-4.1-mini" # 也可改为 qwen-plus-latest / qwen-max / o4-mini 等兼容模型
+
+ocr:
+  provider: "qwen"                     # qwen / ocr_space / openai
+  qwen_api_key: ""                     # 留空时优先读 QWEN_API_KEY / DASHSCOPE_API_KEY
+  qwen_endpoint: "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
+  qwen_ocr_model: "qwen-vl-ocr-latest"
+  qwen_guarantee_model: "qwen-vl-ocr-latest"
+  qwen_timeout_seconds: 90
+  ocr_space_api_key: "helloworld"      # 免费测试 key（有额度/速率限制）
+  ocr_space_endpoint: "https://api.ocr.space/parse/image"
+  ocr_space_language: "chs"            # 中文可用 chs，英文用 eng
+  ocr_space_engine: 2
+  ocr_space_auto_compress: true        # 超过大小限制时自动压缩后再提交
+  ocr_space_max_file_kb: 1024          # OCR.Space 免费接口单文件上限（KB）
+  ocr_space_retry_max_file_kb: 768     # 重试时更激进的压缩上限（KB）
+  ocr_space_processing_retry: 3        # 遇到 E500/资源耗尽时自动重试次数
+  ocr_timeout_seconds: 90
+
+pipeline:
+  source_name: "xiaohongshu"
+  ingest:
+    csv_encoding: "utf-8"
+    chunksize: 2000
+  labeling:
+    batch_size: 10
+    max_rows_per_run: 200
+    temperature: 0
+    concurrency: 1

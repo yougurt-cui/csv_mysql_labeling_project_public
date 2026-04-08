@@ -1,0 +1,21 @@
+# 复制为 dictionaries_seed.yaml 后可自行扩展
+product_category:
+  - {code: "KITCHEN_DISH_RACK", name: "厨房沥水架"}
+  - {code: "KITCHEN_SPICE_RACK", name: "厨房调料架"}
+  - {code: "BATHROOM_SHELF", name: "浴室置物架"}
+ctq:
+  - {code: "SIZE_FIT", name: "尺寸适配/空间匹配"}
+  - {code: "INSTALL_EASE", name: "安装拆卸便利性"}
+  - {code: "ANTI_RUST", name: "耐腐蚀/防锈"}
+  - {code: "STABILITY", name: "稳定性/承重"}
+  - {code: "APPEARANCE", name: "外观/做工/质感"}
+  - {code: "PRICE_VALUE", name: "价格/性价比"}
+purchase_intent:
+  - {code: "ASK_LINK", name: "求链接/求购买方式"}
+  - {code: "ASK_PRICE", name: "询价/比价"}
+  - {code: "WANT_BUY", name: "明确想买"}
+  - {code: "NO_INTENT", name: "无购买意愿"}
+sentiment:
+  - {code: "POS", name: "正向"}
+  - {code: "NEG", name: "负向"}
+  - {code: "NEU", name: "中性/信息"}

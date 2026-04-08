@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+.venv/
+.env
+.env.*
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+
+# Local config
+config/config.yaml
+
+# VSCode
+.vscode/
+.vscode/*.log
+.idea/
+*.iml
+.DS_Store
+
+# Runtime data
+data/*
+!data/README.md
+!data/.gitkeep
+history/*
+!history/README.md
+!history/.gitkeep
+search_comments_*.csv
+search_contents_*.csv
+sql/douyin_raw_comments.sql
+sql/douyin_raw_content.sql
+sql/*_tmp.sql
+logs/
+
+# Data
+data/*.csv
+data/*.xlsx

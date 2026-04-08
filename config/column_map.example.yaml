@@ -1,0 +1,9 @@
+# 复制为 column_map.yaml 后按你的 CSV 列名进行映射
+# canonical -> csv_column
+external_id: "id"
+comment_text: "comment"
+title: "title"
+author: "author"
+created_at: "created_at"
+like_count: "like_count"
+raw_json: ""   # 如果 CSV 有一列本身就是 json，可填列名；没有就留空
